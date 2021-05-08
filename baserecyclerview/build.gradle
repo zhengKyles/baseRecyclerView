@@ -2,13 +2,12 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 28
-
+    compileSdkVersion 27
 
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 28
+        minSdkVersion 15
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -30,7 +29,7 @@ android {
         userOrg = 'kyle'      //bintray注册的用户名
         groupId = 'com.kyle'         //compile引用时的第1部分groupId
         artifactId = 'baseRecyclerView'     //compile引用时的第2部分项目名
-        publishVersion = '1.0.3'    //compile引用时的第3部分版本号
+        publishVersion = '1.1.1'    //compile引用时的第3部分版本号
         desc = 'This is a baseRecyclerView library '
         website = 'https://github.com/zhengKyles/baseRecyclerView'
     }
@@ -40,5 +39,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
-    api 'com.android.support:recyclerview-v7:28.0.0'
+    api 'com.android.support:recyclerview-v7:27.1.1'
 }

@@ -23,7 +23,6 @@
         <attr name="span_count" />
         <attr name="recycler_divider" />
         <attr name="empty_id" />
-        <attr name="lastEnable"/>
     </declare-styleable>
 
     <declare-styleable name="LMyRecyclerView">

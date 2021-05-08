@@ -11,9 +11,10 @@
         android:layout_width="match_parent"
         android:id="@+id/list"
         app:direction="grid"
-        app:span_count="3"
-        app:divider_width_horizontal="20dp"
-        app:divider_height_vertical="20dp"
+        app:span_count="2"
+        app:lastEnable="false"
+        app:divider_width_horizontal="60dp"
+        app:divider_height_vertical="30dp"
         app:recycler_divider="@color/colorPrimary"
         android:layout_height="wrap_content" />
 
