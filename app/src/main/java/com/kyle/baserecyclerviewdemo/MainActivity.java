@@ -1,9 +1,7 @@
 package com.kyle.baserecyclerviewdemo;
 
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.kyle.baserecyclerview.BaseAdapter;
 import com.kyle.baserecyclerview.LRecyclerView;
@@ -21,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         list=findViewById(R.id.list);
         Adapter adapter=new Adapter();
         list.setAdapter(adapter);
-        adapter.setNewData(Arrays.asList(new String[20]));
+        adapter.setNewInstance(Arrays.asList(new String[20]));
     }
     private class Adapter extends BaseAdapter<String,ItemBinding>{
 

@@ -1,15 +1,12 @@
 package com.kyle.baserecyclerview;
 
-import android.databinding.ViewDataBinding;
-
-
+import androidx.databinding.ViewDataBinding;
 /***
  * 单选adapter
  * @param <T>
  * @param <D>
  */
 public class SingleElectionAdapter<T, D extends ViewDataBinding> extends BaseAdapter<T, D> {
-    private OnItemChildClickListener listener;
     protected int curPosition = -1;
 
     public SingleElectionAdapter(int layoutResId) {
@@ -40,14 +37,9 @@ public class SingleElectionAdapter<T, D extends ViewDataBinding> extends BaseAda
                 curPosition = position;
                 SingleElectionAdapter.this.notifyDataSetChanged();
             }
-            if(listener!=null){
-                listener.onItemChildClick(this,binding.getRoot(),position);
+            if(getOnItemClickListener()!=null){
+                setOnItemClick(binding.getRoot(),position);
             }
         });
-    }
-
-
-    public void setOnItemChildClickListener(OnItemChildClickListener listener) {
-        this.listener=listener;
     }
 }
