@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'kotlin-android'
+
 group = "com.github.zhengKyles"
 android {
     compileSdkVersion 30
@@ -31,4 +33,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7'
     api 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
