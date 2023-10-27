@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -31,6 +32,7 @@ android {
         viewBinding = true
     }
 }
+
 
 dependencies {
     implementation("androidx.core:core-ktx:1.9.0")
