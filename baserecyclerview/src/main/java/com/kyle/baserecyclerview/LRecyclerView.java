@@ -256,7 +256,7 @@ public class LRecyclerView extends RecyclerView {
                 if (isLastRow) {
                     bottom = 0;
                 }
-                int itemPosition = ((RecyclerView.LayoutParams) view.getLayoutParams()).getViewLayoutPosition();
+                int itemPosition = ((LayoutParams) view.getLayoutParams()).getViewLayoutPosition();
 
                 int left=0;
                 //将横向的所有间隔总和分成spanCount份，比如spanCount为3，dividerHorizontal为30dp,那么总和为30*(3-2）=60,分成3份60/3=20

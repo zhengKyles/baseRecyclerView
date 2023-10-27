@@ -2,7 +2,6 @@ package com.kyle.baserecyclerview;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.View;
 
 /**
  * Created by Kyle on 2018/8/17.
@@ -20,7 +19,7 @@ public class LMyRecyclerView extends LRecyclerView {
     }
     @Override
     protected void onMeasure(int widthSpec, int heightSpec) {
-        heightSpec = View.MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2, View.MeasureSpec.AT_MOST);
+        heightSpec = MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2, MeasureSpec.AT_MOST);
         super.onMeasure(widthSpec, heightSpec);
     }
 }
