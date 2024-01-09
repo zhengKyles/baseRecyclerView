@@ -35,8 +35,9 @@ android {
 
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     api("io.github.cymchad:BaseRecyclerViewAdapterHelper:4.0.1")
     api("androidx.recyclerview:recyclerview:1.3.1")
+    implementation("com.github.jitpack:gradle-simple:1.0")
 }
