@@ -1,34 +1,21 @@
 package com.kyle.baserecyclerview
 
-import android.content.Context
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import android.view.View
 import androidx.viewbinding.ViewBinding
-import com.chad.library.adapter4.BaseQuickAdapter
+import com.chad.library.adapter.base.BaseQuickAdapter
 
 /**
  * Created by Kyle on 2018/9/13.
  */
-abstract class BaseAdapter<T : Any,D:ViewBinding> :
-    BaseQuickAdapter<T, BaseAdapter.MyViewHolder<D>>() {
-
-    class MyViewHolder<D:ViewBinding>(
-        val binding: D,
-    ) : RecyclerView.ViewHolder(binding.root)
-
-    override fun onCreateViewHolder(
-        context: Context,
-        parent: ViewGroup,
-        viewType: Int
-    ): MyViewHolder<D> {
-        return MyViewHolder(initViewBinding(parent, LayoutInflater.from(parent.context)))
+abstract class BaseAdapter<T, D : ViewBinding>(layoutResId: Int) :
+    BaseQuickAdapter<T, MyViewHolder<D>>(layoutResId, ArrayList()) {
+    override fun createBaseViewHolder(view: View): MyViewHolder<D> {
+        return MyViewHolder(view)
     }
 
-    abstract fun initViewBinding(parent: ViewGroup, inflater: LayoutInflater): D
-    override fun onBindViewHolder(holder: MyViewHolder<D>, position: Int, item: T?) {
-        convert(holder.binding, position, item)
+    override fun convert(helper: MyViewHolder<D>, item: T) {
+        convert(helper.binding as D, helper.adapterPosition, item)
     }
 
-    protected abstract fun convert(binding: D, position: Int, item: T?)
+    protected abstract fun convert(binding: D, position: Int, item: T)
 }
