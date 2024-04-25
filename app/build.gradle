@@ -7,9 +7,6 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
     }
-    dataBinding {
-        enabled true
-    }
     buildTypes {
         release {
             minifyEnabled false
